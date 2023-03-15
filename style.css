@@ -1,0 +1,6 @@
+html, body { min-height: 100%; }
+
+body {
+  color: #581845; 
+  font-family: Arial, Helvetica, sans-serif;
+}
