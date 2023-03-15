@@ -5,34 +5,30 @@
 	<meta name="description" content="Diseño y nuevos medios" />
 	<meta name "viewport" content="width=device-width, initial-scale=1"/>
 	<link href="style.css" rel="stylesheet" />
-	<link href="style.css" rel="stylesheet" />
 	<title>&#127891; DNO037</title>
-
-
 </head>
-<body>
 
-	<main>
-	<h1>
-	Vicente Vargas
-	</h1>
-	<p>
-	Hola, Soy vicente, y la razon por la que me queria meter a este ramo es para aprender hacerca de diseño web y poder manejarme mejor con programas como jaba script
-	</p>
-	</main>
+ <body>
+        
+        <div id="back"><a href="index.html">volver</a></div>
 
-	<div id="next"></div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js" integrity="sha512-WJXVjqeINVpi5XXJ2jn0BSCfp0y80IKrYh731gLRnkAS9TKc5KNt/OfLtu+fCueqdWniouJ1ubM+VI/hbo7POQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js" integrity="sha512-WJXVjqeINVpi5XXJ2jn0BSCfp0y80IKrYh731gLRnkAS9TKc5KNt/OfLtu+fCueqdWniouJ1ubM+VI/hbo7POQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+        <script>
+            var palabra_pasada = new URLSearchParams(window.location.search).get('data');
+            
+            function setup() {
+                createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
+                background('#eceff1');
+                textSize(42);
+            }
+            
+            function draw() {
+                fill(random(30,255),random(30,255), random(30,255));
+                text(palabra_pasada, mouseX, mouseY);
+            }
 
+        </script>
+    </body>
 
-	<script>
-	//Probando comentario en jabba script
-	var palabras = ["warhammer", "cyberpunk", "pathfinders", "dungeons&dragons"];
-	function setup() {
-		ver palabras = random(palabras);
-		createA("page.html?data="+palabra, palabra).parent("next"); 
-		noCanvas();
-	}
-
-</body>
+</html>
